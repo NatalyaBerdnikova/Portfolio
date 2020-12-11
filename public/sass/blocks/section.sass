@@ -1,0 +1,60 @@
+.section
+  position: relative
+  margin-left: 320px
+
+  &__container
+    position: relative
+    margin-left: 15px
+    background-color: white
+    padding: 140px 70px 50px 70px
+    min-height: 100vh
+
+    @media (max-width: $bp-desktop)
+      padding: 130px 20px 30px 20px
+
+    @media (max-width: $bp-mobile)
+      margin-left: 0
+
+    &--grid
+      display: grid
+      grid-template-columns: 50% 50%
+      grid-gap: 30px
+
+      @media (max-width: $bp-desktop)
+        grid-template-columns: 100%
+
+  &__title
+    display: inline-block
+    position: absolute
+    top: 40px
+    left: 5px
+    padding: 10px 15px 15px 70px
+    font-size: 26px
+    font-family: "Oswald", sans-serif
+    font-weight: 500
+    color: white
+    background-color: $c-primary
+    text-shadow: 0 2px $c-dark-primary
+    z-index: 1
+
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      bottom: -10px
+      left: 0
+      height: 10px
+      width: 10px
+      background:  linear-gradient( to left bottom, $c-dark-primary 50%, transparent 50%)
+
+  &__subtitle
+    display: inline-block
+    font-family: "Oswald", sans-serif
+    font-weight: 500
+    font-size: 20px
+    padding-bottom: 5px
+    border-bottom: 2px solid $c-primary
+    margin-bottom: 20px
+
+  @media (max-width: $bp-mobile)
+    margin-left: 0

@@ -1,0 +1,75 @@
+.header
+  position: fixed
+  top: 0
+  bottom: 0
+  width: 100%
+  max-width: 320px
+  background-color: white
+  z-index: 2
+  transition: transform 300ms
+
+  &__photo
+    height: 200px
+    width: 200px
+    border-radius: 100px
+    margin: 20px auto 30px
+    background: url(../images/photo.jpg) no-repeat center center
+    background-size: cover
+
+  &__description
+    margin: 20px 0 30px
+    text-align: center
+
+  &__title
+    font-family: "Oswald", sans-serif
+    font-size: 30px
+    font-weight: 500
+    margin-bottom: 20px
+
+  &__subtitle
+    font-family: "Oswald", sans-serif
+    color: $c-dark-gray
+    font-weight: 300
+    font-size: 24px
+    margin-bottom: 20px
+
+  &__navigation
+    margin-bottom: 20px
+
+    &-link
+      display: block
+      text-align: center
+      padding: 20px 0
+      border-right: 4px solid transparent
+      transition: background-color 200ms, border-color 200ms
+
+      &:hover
+        background-color: $c-light-gray
+        border-color: $c-medium-gray
+
+      &--active
+        background-color: $c-light-gray
+        border-color: $c-primary
+
+  &__social
+    display: flex
+    justify-content: center
+
+    &-link
+      display: block
+      filter: grayscale(100%) opacity(50%)
+      transition: filter 200ms
+
+      &:hover
+        filter: grayscale(0%) opacity(100%)
+
+      & + &
+        margin-left: 20px
+
+  @media (max-width: $bp-mobile)
+    top: 67px
+    transform: translateX(-320px)
+
+  &--visible
+    transform: translateX(0)
+    box-shadow: 5px 0 30px rgba(0, 0, 0, 0.15)

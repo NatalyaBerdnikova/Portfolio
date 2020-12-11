@@ -1,0 +1,25 @@
+.header-mobile
+  display: none
+  position: relative
+  justify-content: space-between
+  align-items: center
+  background-color: white
+  width: 100%
+  padding: 20px 30px
+  border-bottom: 1px solid $c-light-gray
+  z-index: 4
+
+  &__title
+    font-size: 20px
+    font-weight: bold
+    margin: 0
+
+  &__show-button
+    cursor: pointer
+
+    .icon
+      max-height: 25px
+      max-width: 25px
+
+  @media (max-width: 991px)
+    display: flex

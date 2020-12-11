@@ -1,0 +1,47 @@
+.skill
+  background-color: $c-primary
+  height: 9px
+  border-radius: 10px
+  animation-name: load-skill
+  animation-duration: 3s
+
+  &__title
+    display: block
+    font-weight: 500
+    margin-bottom: 10px
+
+  &__container
+    width: 100%
+    height: 15px
+    padding: 2px
+    border: 1px solid $c-primary
+    border-radius: 10px
+    margin-bottom: 15px
+
+  &--html
+    width: 80%
+
+  &--css
+    width: 75%
+
+  &--js
+    width: 30%
+
+  &--sass
+    width: 70%
+
+  &--git
+    width: 50%
+
+  &--gulp
+    width: 30%
+
+  &--ps
+    width: 85%
+
+@keyframes load-skill
+  0%
+    max-width: 0
+
+  100%
+    max-width: 100%

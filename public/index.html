@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__photo"></div>
+    <div class="header__description">
+      <p class="header__title">Наталья Бердникова</p>
+      <p class="header__subtitle">Верстальщик</p>
+    </div>
+    <div class="header__navigation">
+      <ul>
+        <li><a class="header__navigation-link header__navigation-link--active" href="#">Резюме</a></li>
+        <li><a class="header__navigation-link" href="#">Портфолио</a></li>
+      </ul>
+    </div>
+    <div class="header__social">
+      <a target="_blank" class="header__social-link" href="https://github.com/NatalyaBerdnikova">
+        <svg class="icon">
+          <use xlink:href="images/sprite.svg#github"></use>
+        </svg>
+      </a>
+      <a target="_blank" class="header__social-link"
+        href="https://spb.hh.ru/resume/482c1fe7ff0678fe730039ed1f56705958564a">
+        <svg class="icon">
+          <use xlink:href="images/sprite.svg#hh"></use>
+        </svg>
+      </a>
+    </div>
+  </header>
+  <header class="header-mobile">
+    <p class="header-mobile__title">Наталья Бердникова</p>
+    <a class="header-mobile__show-button js-header-show-button">
+      <svg class="icon">
+        <use xlink:href="images/sprite.svg#menu"></use>
+      </svg>
+    </a>
+  </header>
+  <section class="section" id="sectionResume">
+    <h2 class="section__title">Резюме</h2>
+    <div class="section__container section__container--grid">
+      <div class="block-education">
+        <p class="section__subtitle">Образование</p>
+        <div class="block-education-content">
+          <p class="block-education-date">2018</p>
+          <p class="block-education-title">Среднее профессиональное</p>
+          <p class="block-education-subtitle">Академическая школа ИТ</p>
+          <p class="block-education-description">Получены навыки алгоритмического мышления, изучены основы
+            программирования.</p>
+        </div>
+        <div class="block-education-content">
+          <p class="block-education-date">2020</p>
+          <p class="block-education-title">Тренажеры по программированию</p>
+          <p class="block-education-subtitle">HTML Academy</p>
+          <p class="block-education-description">Получены навыки верстки, стилизации, базового браузерного
+            программирования.</p>
+        </div>
+        <div class="block-education-content">
+          <p class="block-education-date">2020</p>
+          <p class="block-education-title">Обучение с наставником</p>
+          <p class="block-education-subtitle">Наставник</p>
+          <p class="block-education-description">Изучена работа с препроцессорами, сборщиками, системой контроля версий
+            git, именование классов по БЭМ. </p>
+        </div>
+      </div>
+      <div class="section__block">
+        <p class="section__subtitle">Навыки</p>
+        <h4 class="skill__title">HTML5</h4>
+        <div class="skill__container">
+          <div class="skill skill--html"></div>
+        </div>
+        <h4 class="skill__title">CSS3</h4>
+        <div class="skill__container">
+          <div class="skill skill--css"></div>
+        </div>
+        <h4 class="skill__title">Браузерный JavaScript</h4>
+        <div class="skill__container">
+          <div class="skill skill--js"></div>
+        </div>
+        <h4 class="skill__title">Git</h4>
+        <div class="skill__container">
+          <div class="skill skill--git"></div>
+        </div>
+        <h4 class="skill__title">SASS</h4>
+        <div class="skill__container">
+          <div class="skill skill--sass"></div>
+        </div>
+        <h4 class="skill__title">Gulp</h4>
+        <div class="skill__container">
+          <div class="skill skill--gulp"></div>
+        </div>
+        <h4 class="skill__title">Photoshop</h4>
+        <div class="skill__container">
+          <div class="skill skill--ps"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
