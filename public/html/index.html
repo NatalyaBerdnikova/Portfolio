@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -17,8 +18,8 @@
     </div>
     <div class="header__navigation">
       <ul>
-        <li><a class="header__navigation-link header__navigation-link--active" href="#">Резюме</a></li>
-        <li><a class="header__navigation-link" href="#">Портфолио</a></li>
+        <li><a href="#" class="header__navigation-link header__navigation-link--active js-header-link" data-section="sectionResume">Резюме</a></li>
+        <li><a href="#" class="header__navigation-link js-header-link" data-section="sectionPortfolio">Портфолио</a></li>
       </ul>
     </div>
     <div class="header__social">
@@ -28,7 +29,7 @@
         </svg>
       </a>
       <a target="_blank" class="header__social-link"
-        href="https://spb.hh.ru/resume/482c1fe7ff0678fe730039ed1f56705958564a">
+        href="https://spb.hh.ru/resume/5a572066ff089002cd0039ed1f366c33544275">
         <svg class="icon">
           <use xlink:href="images/sprite.svg#hh"></use>
         </svg>
@@ -43,10 +44,18 @@
       </svg>
     </a>
   </header>
-  <section class="section" id="sectionResume">
+  <section class="section section--active" id="sectionResume">
     <h2 class="section__title">Резюме</h2>
     <div class="section__container section__container--grid">
-      <div class="block-education">
+      <div class="section__block" style="grid-area: a;">
+        <p class="section__subtitle">Обо мне</p>
+        <p class="section__description">
+          Мне 22 года, два из них живу в Санкт-Петербурге. Два месяца назад решила сменить специализацию с цифрового художника на фронтенд-разработчика. <br>
+          За этот короткий срок я изучила основы и сверстала 4 сайта по макетам, которые показались мне интересными. <br>
+          Сейчас хочу устроиться верстальщииком, чтобы начать получать практический опыт и развиваться.
+        </p>
+      </div>
+      <div class="block-education" style="grid-area: b;">
         <p class="section__subtitle">Образование</p>
         <div class="block-education-content">
           <p class="block-education-date">2018</p>
@@ -70,7 +79,7 @@
             git, именование классов по БЭМ. </p>
         </div>
       </div>
-      <div class="section__block">
+      <div class="section__block" style="grid-area: c;">
         <p class="section__subtitle">Навыки</p>
         <h4 class="skill__title">HTML5</h4>
         <div class="skill__container">
@@ -101,6 +110,78 @@
           <div class="skill skill--ps"></div>
         </div>
       </div>
+    </div>
+  </section>
+  <section class="section portfolio" id="sectionPortfolio">
+    <h2 class="section__title">Портфолио</h2>
+    <div class="section__container">
+      <div class="portfolio__container">
+        <a target="_blank" href="https://natalyaberdnikova.github.io/Luis/#" class="portfolio__item">
+          <img src="images/projects/Luis.jpg">
+          <div class="portfolio__hover">
+            <p class="portfolio__title">
+              Luis
+            </p>
+            <div class="portfolio__icon-link">
+              <svg class="icon">
+                <use xlink:href="images/sprite.svg#external-link"></use>
+              </svg>
+            </div>
+            <p class="portfolio__type">
+              Landing
+            </p>
+          </div>
+        </a>
+        <a target="_blank" href="https://natalyaberdnikova.github.io/Waxom/#" class="portfolio__item">
+          <img src="images/projects/Waxom.jpg">
+          <div class="portfolio__hover">
+            <p class="portfolio__title">
+              Waxom
+            </p>
+            <div class="portfolio__icon-link">
+              <svg class="icon">
+                <use xlink:href="images/sprite.svg#external-link"></use>
+              </svg>
+            </div>
+            <p class="portfolio__type">
+              Landing
+            </p>
+          </div>
+        </a>
+        <a target="_blank" href="https://natalyaberdnikova.github.io/Shopy/" class="portfolio__item">
+          <img src="images/projects/Shopy.jpg">
+          <div class="portfolio__hover">
+            <p class="portfolio__title">
+              Shopy
+            </p>
+            <div class="portfolio__icon-link">
+              <svg class="icon">
+                <use xlink:href="images/sprite.svg#external-link"></use>
+              </svg>
+            </div>
+            <p class="portfolio__type">
+              Online Store
+            </p>
+          </div>
+        </a>
+        <a target="_blank" href="https://natalyaberdnikova.github.io/ShopApp/" class="portfolio__item">
+          <img src="images/projects/ShopApp.jpg">
+          <div class="portfolio__hover">
+            <p class="portfolio__title">
+              ShopApp
+            </p>
+            <div class="portfolio__icon-link">
+              <svg class="icon">
+                <use xlink:href="images/sprite.svg#external-link"></use>
+              </svg>
+            </div>
+            <p class="portfolio__type">
+              Adaptive, Mobile-first, Online Store
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
     </div>
   </section>
   <script src="scripts/main.js"></script>

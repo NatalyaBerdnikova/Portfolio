@@ -1,0 +1,58 @@
+.portfolio
+  @media (max-width: $bp-desktop)
+    margin-top: 0
+
+  &__container
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 20px
+    align-items: start
+
+    @media (max-width: $bp-desktop)
+      grid-template-columns: repeat(1, 1fr)
+
+  &__item
+    position: relative
+    display: block
+
+    &:hover .portfolio__hover
+      z-index: 5
+      opacity: 1
+
+  &__hover
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    top: 0
+    height: 100%
+    width: 100%
+    padding: 20px 30px
+    color: white
+    background-color: rgba(0, 0, 0, 0.4)
+    opacity: 0
+    transition: opacity 300ms
+    pointer-events: none
+
+  &__title
+    position: absolute
+    top: 20px
+    left: 30px
+    font-size: 26px
+    font-weight: 500
+    text-decoration: underline $c-primary
+    margin-bottom: 10px
+
+  &__type
+    position: absolute
+    bottom: 20px
+    left: 30px
+    font-size: 20px
+    line-height: 24px
+
+  &__icon-link
+    .icon
+      fill: white
+      opacity: 0.6
+      max-height: 50px
+      max-width: 50px
